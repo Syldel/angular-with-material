@@ -9,6 +9,9 @@ import { MainHeaderModule } from './main-header/main-header.module';
 import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
 
+/* Pages */
+import { HomePageModule } from './home-page/home-page.module';
+
 @NgModule({
   declarations: [
     AppComponent
@@ -19,7 +22,8 @@ import { MatGridListModule } from '@angular/material/grid-list';
     MainHeaderModule,
     BrowserAnimationsModule,
     MatCardModule,
-    MatGridListModule
+    MatGridListModule,
+    HomePageModule
   ],
   providers: [],
   bootstrap: [AppComponent]

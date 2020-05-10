@@ -16,7 +16,34 @@ Don't forget, it will just use a different environment file, but the build is no
 
 ## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Generate Component
+
+To create a new generic component definition :
+
+`ng g component <name> [options]`
+
+About options:
+--export=true|false	
+When true, the declaring NgModule exports this component. (Default: false)
+
+--module=module	
+The declaring NgModule. (Aliases: -m)
+
+Example:
+`ng g c home-page`
+
+### Generate Module
+
+To create a new generic NgModule definition in the given or default project :
+
+`ng g module <name> [options]`
+
+About options:
+--routing=true|false	
+When true, creates a routing module. (Default: false)
+
+Example:
+`ng g m home-page --routing=true`
 
 ## Build
 

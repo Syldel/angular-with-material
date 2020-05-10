@@ -7,13 +7,27 @@
 <!-- * * * * * * * to get started with your project! * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
-<mat-menu #appMenu="matMenu">
-  <button mat-menu-item>Page 1</button>
-  <button mat-menu-item>Page 2</button>
-  <button mat-menu-item>Page 3</button>
-</mat-menu>
+<app-main-header></app-main-header>
 
-<button mat-flat-button [matMenuTriggerFor]="appMenu">Menu</button>
+<mat-grid-list cols="{{breakpoint}}" rowHeight="100px" (window:resize)="onResize($event)">
+  <mat-grid-tile>
+    <mat-card class="app__mat-card">
+      <mat-card-header>
+        <mat-card-title>API Url</mat-card-title>
+        <!--<mat-card-subtitle>subtitle example</mat-card-subtitle>-->
+      </mat-card-header>
+      <mat-card-content>
+        {{ apiUrl }}
+      </mat-card-content>
+      <!--<mat-card-actions>
+        Footer example
+      </mat-card-actions>-->
+    </mat-card>
+  </mat-grid-tile>
+  <mat-grid-tile>Grid element 2</mat-grid-tile>
+  <mat-grid-tile>Grid element 3</mat-grid-tile>
+</mat-grid-list>
+
 
 <!--
 <style>

@@ -11,6 +11,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 
 /* Pages */
 import { HomePageModule } from './home-page/home-page.module';
+import { ContactPageModule } from './contact-page/contact-page.module';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { HomePageModule } from './home-page/home-page.module';
     BrowserAnimationsModule,
     MatCardModule,
     MatGridListModule,
-    HomePageModule
+    HomePageModule,
+    ContactPageModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -31,7 +31,12 @@ About options:
 When true, the declaring NgModule exports this component. (Default: false)
 
 --module=module	
-The declaring NgModule. (Aliases: -m)
+The declaring NgModule.
+*(Aliases: -m)*
+
+--displayBlock=true|false	
+Specifies if the style will contain :host { display: block; }. (Default: false)
+*(Aliases: -b)*
 
 Example:
 `ng g c home-page`

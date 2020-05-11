@@ -6,11 +6,6 @@ import { MainHeaderModule } from './main-header/main-header.module';
 import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
 
-/* Pages */
-import { HomePageModule } from './home-page/home-page.module';
-import { ContactPageModule } from './contact-page/contact-page.module';
-import { NotFoundPageModule } from './not-found-page/not-found-page.module';
-
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -21,10 +16,7 @@ describe('AppComponent', () => {
         RouterTestingModule,
         MainHeaderModule,
         MatCardModule,
-        MatGridListModule,
-        HomePageModule,
-        ContactPageModule,
-        NotFoundPageModule
+        MatGridListModule
       ]
     }).compileComponents();
   }));

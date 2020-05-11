@@ -9,11 +9,6 @@ import { MainHeaderModule } from './main-header/main-header.module';
 import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
 
-/* Pages */
-import { HomePageModule } from './home-page/home-page.module';
-import { ContactPageModule } from './contact-page/contact-page.module';
-import { NotFoundPageModule } from './not-found-page/not-found-page.module';
-
 @NgModule({
   declarations: [
     AppComponent
@@ -24,10 +19,7 @@ import { NotFoundPageModule } from './not-found-page/not-found-page.module';
     MainHeaderModule,
     BrowserAnimationsModule,
     MatCardModule,
-    MatGridListModule,
-    HomePageModule,
-    ContactPageModule,
-    NotFoundPageModule
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

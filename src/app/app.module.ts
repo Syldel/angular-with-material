@@ -12,6 +12,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 /* Pages */
 import { HomePageModule } from './home-page/home-page.module';
 import { ContactPageModule } from './contact-page/contact-page.module';
+import { NotFoundPageModule } from './not-found-page/not-found-page.module';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { ContactPageModule } from './contact-page/contact-page.module';
     MatCardModule,
     MatGridListModule,
     HomePageModule,
-    ContactPageModule
+    ContactPageModule,
+    NotFoundPageModule
   ],
   providers: [],
   bootstrap: [AppComponent]

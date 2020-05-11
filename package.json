@@ -8,9 +8,12 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy:prod": "ng build --prod --base-href=/angular-with-material/",
-    "pre-commit": "ng lint && ng test",
-    "pre-push": "ng lint && ng test"
+    "deploy:prod": "ng build --prod --base-href=/angular-with-material/"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "ng lint && ng test --no-watch --no-progress --code-coverage"
+    }
   },
   "private": true,
   "dependencies": {

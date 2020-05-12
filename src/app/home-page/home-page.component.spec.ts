@@ -4,6 +4,7 @@ import { HomePageComponent } from './home-page.component';
 
 import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { MatIconModule } from '@angular/material/icon';
 
 describe('HomePageComponent', () => {
   let component: HomePageComponent;
@@ -14,7 +15,8 @@ describe('HomePageComponent', () => {
       declarations: [ HomePageComponent ],
       imports: [
         MatCardModule,
-        MatGridListModule
+        MatGridListModule,
+        MatIconModule
       ]
     })
     .compileComponents();

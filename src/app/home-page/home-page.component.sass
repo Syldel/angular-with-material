@@ -1,3 +1,35 @@
+@import '~src/styles/_variables.sass'
+
+// Specific Theme for Material Card example
+// Theme example for just one Material composant
+$custom-theme-primary-2: mat-palette($mat-light-blue)
+$custom-theme-accent-2: mat-palette($mat-orange, A200, A100, A400)
+$custom-theme-warn-2: mat-palette($mat-red) // optional
+
+// Create the theme object (a Sass map containing all of the palettes).
+$custom-theme-2: mat-dark-theme($custom-theme-primary-2, $custom-theme-accent-2, $custom-theme-warn-2)
+@include mat-card-theme($custom-theme-2)
+
+// Cutom Typographt example
+//$config: mat-typography-config()
+//@include mat-card-typography($config)
+
 \:host
   display: block
-  background-color: #cccc00
+  background-color: #eee
+
+  mat-card
+    flex: 1
+    margin: 10px
+
+  .color-block
+    width: 200px
+    height: 50px
+    &.primary
+      background-color: $primary
+
+    &.accent
+      background-color: $accent
+
+    &.warn
+      background-color: $warn

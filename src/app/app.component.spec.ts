@@ -3,8 +3,6 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 
 import { MainHeaderModule } from './main-header/main-header.module';
-import { MatCardModule } from '@angular/material/card';
-import { MatGridListModule } from '@angular/material/grid-list';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -14,9 +12,7 @@ describe('AppComponent', () => {
       ],
       imports: [
         RouterTestingModule,
-        MainHeaderModule,
-        MatCardModule,
-        MatGridListModule
+        MainHeaderModule
       ]
     }).compileComponents();
   }));

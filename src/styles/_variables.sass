@@ -1,0 +1,63 @@
+// This file can be imported in an other SASS file
+// So we have to put here only shared variables
+
+@import '~@angular/material/theming'
+
+// DOCUMENTATION
+// https://material.angular.io/guide/theming
+
+$custom-theme-primary: mat-palette($mat-light-blue)
+$custom-theme-accent: mat-palette($mat-orange, A200, A100, A400)
+$custom-theme-warn: mat-palette($mat-red) // optional
+
+// Create the theme object (a Sass map containing all of the palettes).
+$custom-theme: mat-light-theme($custom-theme-primary, $custom-theme-accent, $custom-theme-warn)
+
+// Create your Sass color vars (will be available in all the project)
+$primary: mat-color($custom-theme-primary)
+$accent: mat-color($custom-theme-accent)
+$warn: mat-color($custom-theme-warn)
+
+
+// Apply Theme to all Material composants
+// @include angular-material-theme($custom-theme)
+
+// Create a theme. INFORMATION
+// My advise is to import only what we need where we need
+//@mixin angular-material-theme($theme) {
+//  @include mat-core-theme($theme)
+//  @include mat-autocomplete-theme($theme)
+//  @include mat-badge-theme($theme)
+//  @include mat-bottom-sheet-theme($theme)
+//  @include mat-button-theme($theme)
+//  @include mat-button-toggle-theme($theme)
+//  @include mat-card-theme($theme)
+//  @include mat-checkbox-theme($theme)
+//  @include mat-chips-theme($theme)
+//  @include mat-table-theme($theme)
+//  @include mat-datepicker-theme($theme)
+//  @include mat-dialog-theme($theme)
+//  @include mat-divider-theme($theme)
+//  @include mat-expansion-panel-theme($theme)
+//  @include mat-form-field-theme($theme)
+//  @include mat-grid-list-theme($theme)
+//  @include mat-icon-theme($theme)
+//  @include mat-input-theme($theme)
+//  @include mat-list-theme($theme)
+//  @include mat-menu-theme($theme)
+//  @include mat-paginator-theme($theme)
+//  @include mat-progress-bar-theme($theme)
+//  @include mat-progress-spinner-theme($theme)
+//  @include mat-radio-theme($theme)
+//  @include mat-select-theme($theme)
+//  @include mat-sidenav-theme($theme)
+//  @include mat-slide-toggle-theme($theme)
+//  @include mat-slider-theme($theme)
+//  @include mat-stepper-theme($theme)
+//  @include mat-sort-theme($theme)
+//  @include mat-tabs-theme($theme)
+//  @include mat-toolbar-theme($theme)
+//  @include mat-tooltip-theme($theme)
+//  @include mat-tree-theme($theme)
+//  @include mat-snack-bar-theme($theme)
+//}

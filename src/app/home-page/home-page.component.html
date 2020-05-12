@@ -1,1 +1,40 @@
-<p>home-page works!</p>
+<h1>Home page</h1>
+
+<mat-grid-list cols="{{breakpoint}}" rowHeight="100px" (window:resize)="onResize($event)">
+  <mat-grid-tile>
+    <mat-card class="app__mat-card">
+      <mat-card-header>
+        <mat-card-title>API Url</mat-card-title>
+        <!--<mat-card-subtitle>subtitle example</mat-card-subtitle>-->
+      </mat-card-header>
+      <mat-card-content>
+        {{ apiUrl }}
+      </mat-card-content>
+      <!--<mat-card-actions>
+        Footer example
+      </mat-card-actions>-->
+    </mat-card>
+  </mat-grid-tile>
+  <mat-grid-tile>Grid element 2</mat-grid-tile>
+  <mat-grid-tile>Grid element 3</mat-grid-tile>
+</mat-grid-list>
+
+<br/><br/>
+<div>
+  Primary color :
+  <div class="color-block primary"></div>
+</div>
+
+<div>
+  Accent color :
+  <div class="color-block accent"></div>
+</div>
+
+<div>
+  warn color :
+  <div class="color-block warn"></div>
+</div>
+
+<br/><br/>
+Material icon example :
+<mat-icon>dashboard</mat-icon>

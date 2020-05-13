@@ -2,6 +2,7 @@ import 'zone.js/dist/zone-node';
 
 import { ngExpressEngine } from '@nguniversal/express-engine';
 import * as express from 'express';
+import * as compression from 'compression';
 import { join } from 'path';
 
 import { AppServerModule } from './src/main.server';
@@ -21,6 +22,9 @@ export function app() {
 
   server.set('view engine', 'html');
   server.set('views', distFolder);
+
+  // Compress all responses (gzip compression)
+  server.use(compression());
 
   // Example Express Rest API endpoints
   // server.get('/api/**', (req, res) => { });

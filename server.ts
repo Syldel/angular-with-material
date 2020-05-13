@@ -4,6 +4,7 @@ import { ngExpressEngine } from '@nguniversal/express-engine';
 import * as express from 'express';
 import * as compression from 'compression';
 import { join } from 'path';
+import * as helmet from 'helmet';
 
 import { AppServerModule } from './src/main.server';
 import { APP_BASE_HREF } from '@angular/common';
@@ -25,6 +26,16 @@ export function app() {
 
   // Compress all responses (gzip compression)
   server.use(compression());
+
+  // frameguard to prevent clickjacking
+  // "X-Frame-Options: DENY" will prevent anyone from putting this page in an iframe.
+  server.use(helmet.frameguard({ action: 'deny' }));
+
+  // xssFilter adds some small XSS protections
+  server.use(helmet.xssFilter());
+
+  // noSniff to keep clients from sniffing the MIME type
+  server.use(helmet.noSniff());
 
   // Example Express Rest API endpoints
   // server.get('/api/**', (req, res) => { });

@@ -13,7 +13,8 @@
     "serve:ssr": "node dist/angular-project/server/main.js",
     "build:ssr:prod": "ng build --prod && ng run angular-project:server:production",
     "build:ssr:qa": "ng build --configuration=qa && ng run angular-project:server:qa",
-    "prerender": "ng run angular-project:prerender"
+    "prerender": "ng run angular-project:prerender",
+    "analyze": "ng build --prod --stats-json && webpack-bundle-analyzer dist/angular-project/browser/stats-es2015.json"
   },
   "husky": {
     "hooks": {
@@ -62,6 +63,7 @@
     "protractor": "~5.4.3",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
-    "typescript": "~3.8.3"
+    "typescript": "~3.8.3",
+    "webpack-bundle-analyzer": "^3.7.0"
   }
 }

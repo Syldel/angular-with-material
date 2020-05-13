@@ -144,3 +144,11 @@ It will just launch the Express server in "dist/***/server/main.js".
 ### Keep in mind
 
 server-side applications can't reference browser-only global objects such as window, document, navigator, or location.
+
+## Stats
+
+With "webpack-bundle-analyzer" you can get stats about the project
+
+```
+npm run analyze
+```

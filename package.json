@@ -11,7 +11,8 @@
     "deploy:prod": "ng build --prod --base-href=/angular-with-material/",
     "dev:ssr": "ng run angular-project:serve-ssr",
     "serve:ssr": "node dist/angular-project/server/main.js",
-    "build:ssr": "ng build --prod && ng run angular-project:server:production",
+    "build:ssr:prod": "ng build --prod && ng run angular-project:server:production",
+    "build:ssr:qa": "ng build --configuration=qa && ng run angular-project:server:qa",
     "prerender": "ng run angular-project:prerender"
   },
   "husky": {

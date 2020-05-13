@@ -171,6 +171,17 @@
               ],
               "sourceMap": false,
               "optimization": true
+            },
+            "qa": {
+              "outputHashing": "media",
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.qa.ts"
+                }
+              ],
+              "sourceMap": false,
+              "optimization": true
             }
           }
         },
@@ -184,6 +195,10 @@
             "production": {
               "browserTarget": "angular-project:build:production",
               "serverTarget": "angular-project:server:production"
+            },
+            "qa": {
+              "browserTarget": "angular-project:build:qa",
+              "serverTarget": "angular-project:server:qa"
             }
           }
         },

@@ -14,6 +14,11 @@ https://syldel.github.io/angular-with-material/
 
 *This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.6.*
 
+#### Deployment on Github page
+
+To deploy on github page, read this :
+https://dev.to/angular/build-deploy-angular-apps-in-github-pages-using-github-actions-e7a
+
 ### Node version recommendations
 
 ">=10.9.0 <13.0.0"
@@ -105,7 +110,34 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
-# Deployment on Github page
 
-To deploy on github page, read this :
-https://dev.to/angular/build-deploy-angular-apps-in-github-pages-using-github-actions-e7a
+## Server-side rendering (SSR) with Angular Universal
+
+### Work on the SSR version on your local system
+
+To start rendering your app with Universal on your local system, use the following command.
+```
+npm run dev:ssr
+```
+
+To use the QA environment do :
+```
+npm run dev:ssr -- --configuration=qa
+```
+
+### Build a SSR version
+```
+npm run build:ssr:prod
+```
+or
+```
+npm run build:ssr:qa
+```
+
+### Serve the SSR version
+```
+npm run serve:ssr
+```
+It will just launch the Express server in "dist/***/server/main.js".
+(So the SSR build has to be already done.)
+

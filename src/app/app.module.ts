@@ -12,7 +12,7 @@ import { MainHeaderModule } from './main-header/main-header.module';
     AppComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     MainHeaderModule,
     BrowserAnimationsModule

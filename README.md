@@ -1,6 +1,18 @@
 # AngularProject
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.1.
+In this project, there are :
+- "@angular/material" with custom theming examples
+- "@nguniversal/express-engine"
+- Husky to test on "pre-commit"
+- Lazy Page routing examples
+- Build several environments (qa, prod)
+
+### Deploy on Github page
+Look the result of this project on my Github page (Not SSR version) :
+
+https://syldel.github.io/angular-with-material/
+
+*This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.6.*
 
 ### Node version recommendations
 

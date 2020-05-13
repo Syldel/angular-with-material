@@ -8,7 +8,7 @@ import { environment } from '../../environments/environment';
 })
 export class HomePageComponent implements OnInit {
 
-  public breakpoint: number;
+  public breakpoint = 3;
   public apiUrl: string = environment.apiUrl;
 
   constructor() {
@@ -17,11 +17,11 @@ export class HomePageComponent implements OnInit {
 
   ngOnInit(): void {
     // TODO : It will be better to use CSS media queries...
-    this.breakpoint = (window.innerWidth <= 800) ? 1 : 3;
+    // this.breakpoint = (window.innerWidth <= 800) ? 1 : 3;
   }
 
   onResize(event) {
     // TODO : It will be better to use CSS media queries...
-    this.breakpoint = (event.target.innerWidth <= 800) ? 1 : 3;
+    // this.breakpoint = (event.target.innerWidth <= 800) ? 1 : 3;
   }
 }

@@ -141,3 +141,6 @@ npm run serve:ssr
 It will just launch the Express server in "dist/***/server/main.js".
 (So the SSR build has to be already done.)
 
+### Keep in mind
+
+server-side applications can't reference browser-only global objects such as window, document, navigator, or location.

@@ -6,6 +6,9 @@ import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatIconModule } from '@angular/material/icon';
 
+import { ImageLoaderDirectiveModule } from '../directives/image-loader-directive.module';
+import { DeferLoadModule } from '@trademe/ng-defer-load';
+
 describe('HomePageComponent', () => {
   let component: HomePageComponent;
   let fixture: ComponentFixture<HomePageComponent>;
@@ -16,7 +19,9 @@ describe('HomePageComponent', () => {
       imports: [
         MatCardModule,
         MatGridListModule,
-        MatIconModule
+        MatIconModule,
+        ImageLoaderDirectiveModule,
+        DeferLoadModule
       ]
     })
     .compileComponents();

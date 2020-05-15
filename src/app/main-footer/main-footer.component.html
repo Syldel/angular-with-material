@@ -1,0 +1,19 @@
+<h3>Footer Component lazy loaded</h3>
+<p>(@NgModule is in "main-footer.component.ts")</p>
+<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
+  <div>
+    <label for="name">
+      Name
+    </label>
+    <input id="name" type="text" formControlName="name" placeholder="Enter Name" >
+  </div>
+
+  <div>
+    <label for="series">
+      Series
+    </label>
+    <input id="series" type="text" formControlName="series" placeholder="Enter Series" />
+  </div>
+
+  <button class="button" type="submit">Submit</button>
+</form>

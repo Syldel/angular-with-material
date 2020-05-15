@@ -1,6 +1,21 @@
 <h1>Home page</h1>
 
-<mat-grid-list cols="{{breakpoint}}" rowHeight="100px" (window:resize)="onResize($event)">
+<h3>In this Angular 9 project, you can find :</h3>
+<ul>
+  <li>"@angular/material" with custom theming examples</li>
+  <li>"@nguniversal/express-engine"</li>
+  <li>Build several environments (qa, prod)</li>
+  <li>Server Securities (with Helmet)</li>
+  <li>Husky to test on "pre-commit"</li>
+  <li>Lazy Page routing examples</li>
+  <li>Lazy loading of images example (with ng-defer-load)</li>
+  <li>Lazy loading of component example</li>
+  <li>Small Form example</li>
+</ul>
+
+<br/><br/>
+<h3>Grid example</h3>
+<mat-grid-list cols="3" rowHeight="100px">
   <mat-grid-tile>
     <mat-card class="app__mat-card">
       <mat-card-header>
@@ -19,22 +34,29 @@
   <mat-grid-tile>Grid element 3</mat-grid-tile>
 </mat-grid-list>
 
-<br/><br/>
+<br /><br />
 <div>
   Primary color :
   <div class="color-block primary"></div>
 </div>
-
 <div>
   Accent color :
   <div class="color-block accent"></div>
 </div>
-
 <div>
   warn color :
   <div class="color-block warn"></div>
 </div>
 
-<br/><br/>
+<br /><br />
 Material icon example :
 <mat-icon>dashboard</mat-icon>
+
+<br /><br />
+<h3>Go to the bottom of the page to see the Footer component lazy loaded!</h3>
+<div style="background-color: aquamarine; width: 20rem; height: 60rem;"></div>
+
+<h3>The component below is lazy loaded!</h3>
+<div style="min-height: 1rem;" [preRender]="false" (deferLoad)="loadFooter()">
+  <ng-container #footerContainer></ng-container>
+</div>

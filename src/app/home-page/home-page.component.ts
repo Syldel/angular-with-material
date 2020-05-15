@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewContainerRef, ComponentFactoryResolver, ViewChild } from '@angular/core';
 import { environment } from '../../environments/environment';
 
 @Component({
@@ -8,20 +8,31 @@ import { environment } from '../../environments/environment';
 })
 export class HomePageComponent implements OnInit {
 
-  public breakpoint = 3;
   public apiUrl: string = environment.apiUrl;
 
-  constructor() {
+  @ViewChild('footerContainer', { read: ViewContainerRef })
+  private footerViewContainerRef: ViewContainerRef;
+
+  constructor(
+    private cfr: ComponentFactoryResolver
+  ) {
     console.log('HomePageComponent apiUrl:', this.apiUrl);
   }
 
-  ngOnInit(): void {
-    // TODO : It will be better to use CSS media queries...
-    // this.breakpoint = (window.innerWidth <= 800) ? 1 : 3;
+  ngOnInit(): void { }
+
+  loadFooter() {
+    this.getLazyFooter();
   }
 
-  onResize(event) {
-    // TODO : It will be better to use CSS media queries...
-    // this.breakpoint = (event.target.innerWidth <= 800) ? 1 : 3;
+  async getLazyFooter() {
+    // DOCUMENTATION : https://brianflove.com/2019-12-13/lazy-load-angular-v9-components/
+    if (this.footerViewContainerRef) {
+      this.footerViewContainerRef.clear();
+      const { MainFooterComponent } = await import('../main-footer/main-footer.component');
+      this.footerViewContainerRef.createComponent(
+        this.cfr.resolveComponentFactory(MainFooterComponent)
+      );
+    }
   }
 }

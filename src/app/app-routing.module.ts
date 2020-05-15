@@ -7,6 +7,10 @@ const routes: Routes = [
     loadChildren: () => import('./home-page/home-page.module').then(m => m.HomePageModule)
   },
   {
+    path: 'images',
+    loadChildren: () => import('./pages/images-page/images-page.module').then(m => m.ImagesPageModule)
+  },
+  {
     path: 'contact',
     loadChildren: () => import('./contact-page/contact-page.module').then(m => m.ContactPageModule)
   },

@@ -1,0 +1,23 @@
+<h1>Images page</h1>
+
+<p>Lazy loading of images example</p>
+
+<!-- Note about "deferLoad" : -->
+<!-- You might want to have a loading state for your element with approximately same height as the element. -->
+<!-- https://github.com/TradeMe/ng-defer-load -->
+<!-- It loads the element on the server by default supporting Search Engine Optimization. -->
+<!-- If you do not want to pre-render the element in server, you can set preRender to false on the element. -->
+<div
+  class="app-images-page__image-container"
+  *ngFor="let image of imageItemCollection"
+  (deferLoad)="image.show = true"
+>
+  <img appImageLoader
+    *ngIf="image.show"
+    src=""
+    alt="photo"
+    imgSrc="{{image.url}}"
+    errorSrc="/assets/svg/undraw_default_photo.svg"
+    loaderSrc="/assets/svg/loading.svg"
+  />
+</div>

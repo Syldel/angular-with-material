@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { environment } from './../environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +8,6 @@ import { environment } from './../environments/environment';
 export class AppComponent {
   title = 'angular-project';
 
-  constructor() {
-    console.log('AppComponent environment.apiUrl:', environment.apiUrl);
-  }
+  constructor() { }
+
 }

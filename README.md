@@ -156,3 +156,10 @@ With "webpack-bundle-analyzer" you can get stats about the project
 ```
 npm run analyze
 ```
+
+## Test
+
+To test a specific "spec" file :
+```
+ng test --include **/main-footer.component.spec.ts
+```

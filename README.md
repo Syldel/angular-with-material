@@ -3,9 +3,13 @@
 In this project, there are :
 - "@angular/material" with custom theming examples
 - "@nguniversal/express-engine"
+- Build several environments (qa, prod)
+- Server Securities (with Helmet)
 - Husky to test on "pre-commit"
 - Lazy Page routing examples
-- Build several environments (qa, prod)
+- Lazy loading of images example (with ng-defer-load)
+- Lazy loading of component example
+- Small Form example
 
 ### Deploy on Github page
 Look the result of this project on my Github page (Not SSR version) :

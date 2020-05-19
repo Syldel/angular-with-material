@@ -1,0 +1,40 @@
+<h1 class="countries-page-title">countries works!</h1>
+
+<h3>Example of page with API Resolver</h3>
+<ul>
+  <li>
+    <a [routerLink]="['/countries']" >/countries</a>
+  </li>
+  <li>
+    <a [routerLink]="['/countries/fr']" >/countries/fr</a>
+  </li>
+  <li>
+    <a [routerLink]="['/countries/be']" >/countries/be</a>
+  </li>
+  <li>
+    <a [routerLink]="['/countries/gb']" >/countries/gb</a>
+  </li>
+  <li>
+    <a [routerLink]="['/countries/en']" >/countries/en</a>
+  </li>
+</ul>
+
+<div class="well" *ngIf="response">
+  <div *ngIf="!response.error">
+    Response is: {{ response | json }}<br /><br /><img
+      class="img-responsive"
+      src="{{ response.flag }}"
+      alt="country flag"
+    />
+  </div>
+  <div
+    class="alert alert-danger"
+    *ngIf="response.name === 'HttpErrorResponse'"
+    role="alert"
+  >
+    <span class="right-spacer">Erreur :</span>
+    <strong class="right-spacer">{{ response.error.status || response.status }}</strong>
+    <strong>{{ response.error.message || response.statusText }}</strong>
+    <div *ngIf="response.message">{{ response.message }}</div>
+  </div>
+</div>

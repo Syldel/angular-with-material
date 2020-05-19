@@ -1,6 +1,6 @@
 import { Injectable, Inject, PLATFORM_ID } from '@angular/core';
 import { Resolve, ActivatedRouteSnapshot, Data } from '@angular/router';
-import { Observable, of, timer, Observer } from 'rxjs';
+import { Observable, of, timer } from 'rxjs';
 import { takeUntil, catchError } from 'rxjs/operators';
 import { isPlatformBrowser } from '@angular/common';
 import { ApiService } from '../../services/api.service';

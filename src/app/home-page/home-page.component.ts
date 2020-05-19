@@ -16,7 +16,7 @@ export class HomePageComponent implements OnInit {
   constructor(
     private cfr: ComponentFactoryResolver
   ) {
-    console.log('HomePageComponent apiUrl:', this.apiUrl);
+    // console.log('HomePageComponent apiUrl:', this.apiUrl);
   }
 
   ngOnInit(): void { }

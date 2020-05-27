@@ -100,6 +100,12 @@ Then run :
 http-server ./dist/angular-project
 ```
 
+Or use "lite-server" by John Papa :
+https://github.com/johnpapa/lite-server
+```
+npm install lite-server --save-dev
+```
+
 *The output folder is dist/project-name/ by default. To output to a different folder, change the outputPath in angular.json.*
 
 ## Running unit tests
@@ -116,6 +122,12 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 
 ## Server-side rendering (SSR) with Angular Universal
+
+Why use server-side rendering?
+There are three main reasons to create a Universal version of your app.
+- Facilitate web crawlers through search engine optimization (SEO)
+- Improve performance on mobile and low-powered devices
+- Show the first page quickly with a first-contentful paint (FCP)
 
 ### Work on the SSR version on your local system
 
@@ -157,9 +169,19 @@ With "webpack-bundle-analyzer" you can get stats about the project
 npm run analyze
 ```
 
-## Test
+## Tests
 
 To test a specific "spec" file :
 ```
 ng test --include **/main-footer.component.spec.ts
 ```
+
+### e2e ChromeDriver problem
+
+`ng e2e` by default, it will update the ChromeDriver.
+To don't update the ChromeDriver, use :
+`ng e2e --no-webdriver-update`
+
+To use a specific ChromeDriver version :
+`webdriver-manager update --versions.chrome 81.0.4044.138`
+Look in "node_modules\protractor\node_modules\webdriver-manager" you will find the Chrome drivers already downloaded.
